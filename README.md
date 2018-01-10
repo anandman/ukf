@@ -37,17 +37,20 @@ This code implements an Unscented Kalman Filter to estimate the state of a movin
 
 If you wish to modify the communication between the simulator and filter, here is the main protocol that main.cpp uses for uWebSocketIO.
 
-INPUT: values provided by the simulator to the C++ program
+**INPUT**: values provided by the simulator to the C++ program
 
+```
 ["sensor_measurement"] => the measurment that the simulator observed (either lidar or radar)
+```
 
+**OUTPUT**: values provided by the c++ program to the simulator
 
-OUTPUT: values provided by the c++ program to the simulator
-
+```
 ["estimate_x"] <= kalman filter estimated position x
 ["estimate_y"] <= kalman filter estimated position y
 ["rmse_x"]
 ["rmse_y"]
 ["rmse_vx"]
 ["rmse_vy"]
+```
 
